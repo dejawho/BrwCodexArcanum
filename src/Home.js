@@ -4,6 +4,8 @@ import React from 'react';
 import { StyleSheet, View, ImageBackground, SafeAreaView } from 'react-native';
 import Image from 'react-native-scalable-image';
 import SchoolList from './SchoolList';
+import ListSchoolSpell from './ListSchoolSpell';
+import { nodeInternals } from 'stack-utils';
 
 const grimoryImage = require('../assets/grimoryImage.png');
 
@@ -43,19 +45,24 @@ class Home extends React.Component {
     }
   }
 
+  doSchoolListBack = () => {
+    this.setState({isSchoolSelectionOpen: false, showSchoolName: null});
+  }
+
   render() {
     const imageHeight = (this.state.imageContainerHeight - 50) / 4;
     return (
       <View style={{ flex: 1 }}>
         <ImageBackground source={require('../assets/background.png')} style={{ flex: 1 }}>
-          <SchoolList isSchoolOpen={this.state.isSchoolSelectionOpen} itemSelected={this.addItemCallback}/>
-          <SafeAreaView style={{ flex: 1, flexDirection: 'column', alignContent: 'center', justifyContent: 'space-between', paddingTop: 10 }} onLayout={this.imageContainerLayout}>
+          <SchoolList isSchoolOpen={this.state.isSchoolSelectionOpen} itemSelected={this.schoolSelected}/>
+          <ListSchoolSpell isSchoolListOpen={this.state.showSchoolName !== null} schoolName={this.state.showSchoolName} doBack={this.doSchoolListBack}/>
+          <SafeAreaView style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', paddingTop: 10 }} onLayout={this.imageContainerLayout}>
             <Image height={imageHeight} source={grimoryImage} onPress={this.showSchoolSelection}/>
             <Image height={imageHeight} source={schoolImage} />
             <Image height={imageHeight} source={magesImage} />
             <View style={{ flexDirection: 'row', alignContent: 'center' }}>
-              <Image height={imageHeight} source={roomImage} />
-              <Image height={imageHeight} source={referenceImage} />
+              <Image height={imageHeight} width={100} style={{paddingRight: 100}} source={roomImage} />
+              <Image height={imageHeight} width={100} source={referenceImage} />
             </View>
           </SafeAreaView>
         </ImageBackground>

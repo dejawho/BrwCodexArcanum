@@ -33,10 +33,10 @@ class SchoolList extends React.Component {
                 data={DATA}
                 renderItem={({ item }) => (<TouchableWithoutFeedback onPress={() => this.itemSelected(item)}>
                   <View>
-                    <Text onPress={() => this.itemSelected(item)} style={{fontSize: 20, fontWeight: 'Bold', color: 'white'}}>{item}</Text>
+                    <Text onPress={() => this.itemSelected(item)} style={{fontSize: 20, fontWeight: 'bold', color: 'white'}}>{item}</Text>
                   </View>
                 </TouchableWithoutFeedback>)}
-                keyExtractor={item => item.name}
+                keyExtractor={item => item}
               />
             </SafeAreaView>
           </View>
