@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const COSPIRATION_DATA = [
+export const NECROMANCY_DATA = [
     {
         image: require('../../assets/schools/cospirazione/a01.png'),
         title: 'Muro di Lame - Blade Barrage',
@@ -74,11 +74,11 @@ export const COSPIRATION_DATA = [
     },
 ];
 
-export const COSPIRATION_DESCRIPTION = {
-    name: 'COSPIRAZIONE',
-    image: require('../../assets/schools/cospirazione/cospirazione.png'),
-    text: 'Un vero Maestro della Cospirazione ha un solo obiettivo: assoggettare le menti dei nemici.\nLa sua Magia è un mosaico di tradimenti, cospirazioni, bugie e sussurri. Niente può essere lasciato al caso, nessuno fugge dalla tela che questo ragno arcano tesse pazientemente, nessuno può sopravvivere alle sue trappole mortali. La Scuola è rappresentata dal simbolo astrale formato da Lune e Stella, Regina del Cielo, su sfondo viola, che simboleggia anche la corte di tutti i suoi inganni e falsità. Furti e omicidi in assoluto silenzio sono solo alcune delle spregevoli tattiche che questi maghi amano adoperare. Il Cospiratore non combatte mai in modo diretto ed in campo aperto, ma tutti conoscono e temono le sue capacità a tal punto da non aver bisogno di superflue dimostrazioni. La Scuola della Cospirazione permette ai Maghi di lanciare magie di Protezione, attivare trappole e muoversi come vento invisibile all\'interno della Loggia.Un Cospiratore risolve missioni, sottrae le missioni ai nemici e può perfino allearsi con la Rosa Nera al fine di condividerne i Punti Potere.',
-    keyElements: 'Movimento, Attivazione Stanze, Trappole che causano danni, Furto di Punti Potere e Missioni, Protezione dai Danni, Collaborazione con la Rosa Nera',
-    affinities: 'Divinazione, Illusione',
-    difficulty: 'Medio/Alta',
+export const NECROMANCY_DESCRIPTION = {
+    name: 'NECROMANZIA',
+    image: require('../../assets/schools/necromanzia/necromanzia.png'),
+    text: 'La Necromanzia è il controllo sui morti. Freddo e oscuro come il ghiaccio nero è il cuore dei maghi di questa Scuola, dimenticate il calore dei raggi del sole se osate abbracciare questa disciplina.\n\nIl solo proposito del Necromante è portare il regno della morte sul campo di battaglia, scatenando terrore e corruzione nei cuori e nei corpi di chiunque tenti di ostacolarlo. Questa Scuola ha il potere di evocare creature non-morte, costruire armi ed armature dalle ossa, mordere come vampiri ed afferrare con gelidi artigli. Il Necromante uccide lentamente ed accuratamente, ma in modo inesorabile.\n\nIl simbolo della Scuola è un Teschio Grigio, il Tristo Mietitore. Usando i poteri di questa Scuola non vi limiterete ad infliggere danni ai nemici, ma riempirete il campo di gioco con orride creature Non-morte. Inoltre, con le magie Vampiriche potrete ripristinare la vostra salute rubandola ai vostri avversari, donandogli in cambio una morte atroce. La Necromanzia può convertire i danni inflitti dalle altre Scuole, come uno zombie che infetta ciò che morde.',
+    keyElements: 'Infliggere danni con le Evocazioni, Numerose creature da Evocare, Danni Diretti, Guadagnare o sottrarre Punti Potere, Conversione dei Danni',
+    affinities: 'Distruzione, Illusione, Cospirazione',
+    difficulty: 'Bassa',
 };

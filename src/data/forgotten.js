@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const COSPIRATION_DATA = [
+export const FORGOTTEN_DATA = [
     {
         image: require('../../assets/schools/cospirazione/a01.png'),
         title: 'Muro di Lame - Blade Barrage',
@@ -74,11 +74,11 @@ export const COSPIRATION_DATA = [
     },
 ];
 
-export const COSPIRATION_DESCRIPTION = {
-    name: 'COSPIRAZIONE',
-    image: require('../../assets/schools/cospirazione/cospirazione.png'),
-    text: 'Un vero Maestro della Cospirazione ha un solo obiettivo: assoggettare le menti dei nemici.\nLa sua Magia è un mosaico di tradimenti, cospirazioni, bugie e sussurri. Niente può essere lasciato al caso, nessuno fugge dalla tela che questo ragno arcano tesse pazientemente, nessuno può sopravvivere alle sue trappole mortali. La Scuola è rappresentata dal simbolo astrale formato da Lune e Stella, Regina del Cielo, su sfondo viola, che simboleggia anche la corte di tutti i suoi inganni e falsità. Furti e omicidi in assoluto silenzio sono solo alcune delle spregevoli tattiche che questi maghi amano adoperare. Il Cospiratore non combatte mai in modo diretto ed in campo aperto, ma tutti conoscono e temono le sue capacità a tal punto da non aver bisogno di superflue dimostrazioni. La Scuola della Cospirazione permette ai Maghi di lanciare magie di Protezione, attivare trappole e muoversi come vento invisibile all\'interno della Loggia.Un Cospiratore risolve missioni, sottrae le missioni ai nemici e può perfino allearsi con la Rosa Nera al fine di condividerne i Punti Potere.',
-    keyElements: 'Movimento, Attivazione Stanze, Trappole che causano danni, Furto di Punti Potere e Missioni, Protezione dai Danni, Collaborazione con la Rosa Nera',
+export const FORGOTTEN_DESCRIPTION = {
+    name: 'DIMENTICATA',
+    image: require('../../assets/schools/dimenticata/dimenticata.png'),
+    text: 'Un vero Maestro della Cospirazione ha un solo obiettivo: assoggettare le menti dei nemici.\n\nLa sua Magia è un mosaico di tradimenti, cospirazioni, bugie e sussurri. Niente può essere lasciato al caso, nessuno fugge dalla tela che questo ragno arcano tesse pazientemente, nessuno può sopravvivere alle sue trappole mortali. La Scuola è rappresentata dal simbolo astrale formato da Lune e Stella, Regina del Cielo, su sfondo viola, che simboleggia anche la corte di tutti i suoi inganni e falsità. Furti e omicidi in assoluto silenzio sono solo alcune delle spregevoli tattiche che questi maghi amano adoperare. Il Cospiratore non combatte mai in modo diretto ed in campo aperto, ma tutti conoscono e temono le sue capacità a tal punto da non aver bisogno di superflue dimostrazioni. La Scuola della Cospirazione permette ai Maghi di lanciare magie di Protezione, attivare trappole e muoversi come vento invisibile all\'interno della Loggia.Un Cospiratore risolve missioni, sottrae le missioni ai nemici e può perfino allearsi con la Rosa Nera al fine di condividerne i Punti Potere.',
+    keyElements: 'Movimento, Attivazione Stanze, Trappole che Causano Danno, Furto di Punti Potere e Missione, Protezione dai Danni, Collaborazione con la Rosa Nera',
     affinities: 'Divinazione, Illusione',
     difficulty: 'Medio/Alta',
 };

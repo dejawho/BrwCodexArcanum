@@ -1,11 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text } from 'react-native';
-import Image from 'react-native-scalable-image';
-
-const fff = require('../assets/grimoryImage.png');
-
+import { View, Text, Image } from 'react-native';
 
 class SchoolSpell extends React.Component {
 
@@ -34,16 +30,18 @@ class SchoolSpell extends React.Component {
   }
 
   render() {
-    const imageWidth = (this.state.imageContainerWidth - 50) / 4;
+    const imageWidth = (this.state.imageContainerWidth - 50) / 3;
     return (
-      <View style={{ flex: 1, flexDirection: 'row' }}>
-            <Image width={imageWidth} source={fff} style={{flex: 1, justifyContent: 'center'}}/>
-            <View style={{flex: 3, flexDirection: 'column'}}>
-              <Text style={{fontSize: 30, fontWeight: 'Bold'}}>{this.props.title}</Text>
-              <Text style={{fontSize: 15, fontWeight: 'Bold'}}>Effetto</Text>
-              <Text style={{fontSize: 15}}>{this.props.effect}</Text>
-              <Text style={{fontSize: 15, fontWeight: 'Bold'}}>Effetto Verso</Text>
-              <Text style={{fontSize: 15}}>{this.props.reverseEffect}</Text>
+      <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 5, paddingRight: 5}}>
+             <View style ={{flex: 1, justifyContent: 'center'}}>
+             {this.props.image ?  <Image source={this.props.image} style={{resizeMode: 'contain', width: imageWidth}}/> : null}
+             </View>
+            <View style={{flex: 2, flexDirection: 'column', paddingLeft: 3}}>
+              <Text style={{fontSize: 30, fontWeight: 'bold'}}>{this.props.title}</Text>
+              <Text style={{fontSize: 17, fontWeight: 'bold'}}>Effetto</Text>
+              <Text style={{fontSize: 17}}>{this.props.effect}</Text>
+              <Text style={{fontSize: 17, fontWeight: 'bold'}}>Effetto Verso</Text>
+              <Text style={{fontSize: 17}}>{this.props.reverseEffect}</Text>
             </View>
       </View>
     );

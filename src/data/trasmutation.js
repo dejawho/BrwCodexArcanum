@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const COSPIRATION_DATA = [
+export const TRASMUTATION_DATA = [
     {
         image: require('../../assets/schools/cospirazione/a01.png'),
         title: 'Muro di Lame - Blade Barrage',
@@ -74,11 +74,11 @@ export const COSPIRATION_DATA = [
     },
 ];
 
-export const COSPIRATION_DESCRIPTION = {
-    name: 'COSPIRAZIONE',
-    image: require('../../assets/schools/cospirazione/cospirazione.png'),
-    text: 'Un vero Maestro della Cospirazione ha un solo obiettivo: assoggettare le menti dei nemici.\nLa sua Magia è un mosaico di tradimenti, cospirazioni, bugie e sussurri. Niente può essere lasciato al caso, nessuno fugge dalla tela che questo ragno arcano tesse pazientemente, nessuno può sopravvivere alle sue trappole mortali. La Scuola è rappresentata dal simbolo astrale formato da Lune e Stella, Regina del Cielo, su sfondo viola, che simboleggia anche la corte di tutti i suoi inganni e falsità. Furti e omicidi in assoluto silenzio sono solo alcune delle spregevoli tattiche che questi maghi amano adoperare. Il Cospiratore non combatte mai in modo diretto ed in campo aperto, ma tutti conoscono e temono le sue capacità a tal punto da non aver bisogno di superflue dimostrazioni. La Scuola della Cospirazione permette ai Maghi di lanciare magie di Protezione, attivare trappole e muoversi come vento invisibile all\'interno della Loggia.Un Cospiratore risolve missioni, sottrae le missioni ai nemici e può perfino allearsi con la Rosa Nera al fine di condividerne i Punti Potere.',
-    keyElements: 'Movimento, Attivazione Stanze, Trappole che causano danni, Furto di Punti Potere e Missioni, Protezione dai Danni, Collaborazione con la Rosa Nera',
-    affinities: 'Divinazione, Illusione',
-    difficulty: 'Medio/Alta',
+export const TRASMUTATION_DESCRIPTION = {
+    name: 'Trasmutazione',
+    image: require('../../assets/schools/trasmutazione/trasmutazione.png'),
+    text: 'Un Trasmutatore ha come scopo quello di potenziare se stesso e modificare l\'ambiente che lo circonda tramite potenti magie, come ad esempio: Artigli di Roccia, Rito del Cambiamento, Rito del Controllo, Fiamme Instabili e Mutazione Sfigurante. Dotato di una forza fisica devastante, non teme il combattimento corpo a corpo, anche se non \u00e8 solo tramite brutali battaglie che essi sfruttano il potere della Trasmutazione. Un Trasmutatore mirerà, infatti, a controllare l\'2019ambiente e tutto ciò che lo circonda per garantirsi una superiorità schiacciante sugli avversari.\n\nLe Magie della Trasmutazione generano Instabilità, sfruttando le sue abilità superiori per mutare l\'ambiente circostante, fino a piegarne le leggi fisiche che lo caratterizzano. Il Simbolo della Scuola della Trasmutazione è una foglia, che rappresenta il costante mutamento della natura , mentre il colore verde richiama la bellezza selvaggia del creato. Alcune Magie della Trasmutazione, come le magie dei Riti, incrementano gli effetti basati sull\'instabilità,permettendo di assegnare segnalini Instabilità aggiuntivi alle stanze.',
+    keyElements: 'Combattimento ravvicinato, Combinazione di possenti attacchi fisici, Riti di posizionamento, Posizionamento delle Instabilità, Movimento tramite magie, Guadagno di Punti Potere tramite Riti',
+    affinities: 'Distruzione, Divinazione',
+    difficulty: 'Media',
 };

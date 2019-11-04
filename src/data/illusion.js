@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const COSPIRATION_DATA = [
+export const ILLUSION_DATA = [
     {
         image: require('../../assets/schools/cospirazione/a01.png'),
         title: 'Muro di Lame - Blade Barrage',
@@ -74,11 +74,11 @@ export const COSPIRATION_DATA = [
     },
 ];
 
-export const COSPIRATION_DESCRIPTION = {
-    name: 'COSPIRAZIONE',
-    image: require('../../assets/schools/cospirazione/cospirazione.png'),
-    text: 'Un vero Maestro della Cospirazione ha un solo obiettivo: assoggettare le menti dei nemici.\nLa sua Magia è un mosaico di tradimenti, cospirazioni, bugie e sussurri. Niente può essere lasciato al caso, nessuno fugge dalla tela che questo ragno arcano tesse pazientemente, nessuno può sopravvivere alle sue trappole mortali. La Scuola è rappresentata dal simbolo astrale formato da Lune e Stella, Regina del Cielo, su sfondo viola, che simboleggia anche la corte di tutti i suoi inganni e falsità. Furti e omicidi in assoluto silenzio sono solo alcune delle spregevoli tattiche che questi maghi amano adoperare. Il Cospiratore non combatte mai in modo diretto ed in campo aperto, ma tutti conoscono e temono le sue capacità a tal punto da non aver bisogno di superflue dimostrazioni. La Scuola della Cospirazione permette ai Maghi di lanciare magie di Protezione, attivare trappole e muoversi come vento invisibile all\'interno della Loggia.Un Cospiratore risolve missioni, sottrae le missioni ai nemici e può perfino allearsi con la Rosa Nera al fine di condividerne i Punti Potere.',
-    keyElements: 'Movimento, Attivazione Stanze, Trappole che causano danni, Furto di Punti Potere e Missioni, Protezione dai Danni, Collaborazione con la Rosa Nera',
-    affinities: 'Divinazione, Illusione',
-    difficulty: 'Medio/Alta',
+export const ILLUSION_DESCRIPTION = {
+    name: 'ILLUSIONE',
+    image: require('../../assets/schools/illusione/illusione.png'),
+    text: 'Gli illusionisti sono la follia incarnata, creano labirinti di specchi, forme d\'ombra, ingannano le proprie vittime annientandone la psiche per poi spingerle verso la morte. I Maestri della Scuola dell\'Illusione non sbagliano mai un trucco, non si lasciano mai sfuggire l\'occasione di fare impazzire i loro nemici. Non affrontano mai un combattimento in modo diretto, nascondendo le loro intenzioni omicide dietro una cortina di fumo e illusioni. Ogni scontro \u00e8 uno spettacolo in cui nessun spettatore è tenuto in disparte.\n\nTutti interpretano un ruolo nel loro macabro teatro di morte, alcuni stolti credono perfino di essere vicini alla vittoria, mentre vengono traditi dai loro sensi e cadono preda di beffe crudeli. Il simbolo della Scuola è una Maschera con due facce, che rappresenta la dualità e il fragile confine tra genialit\u00e0 e follia.\n\nL\'obiettivo dell\'Illusionista è quello di usare tutte le risorse sul tavolo da gioco e sfruttare le tattiche degli avversari a proprio vantaggio. Gli Illusionisti copiano le missioni degli altri Maghi, giocano con le loro menti rubando le evocazioni nemiche, giocano con i loro avversari come se fossero delle marionette.\n\nMolte carte della Scuola permettono di scegliere tra 2 Effetti, la Maschera Sorridente e la Maschera Piangente: la prima porta benefici all\'illusionista, mentre la seconda risulta essere la rovina dei suoi nemici.\n\nTrappole e Protezioni diventano le armi fondamentali per questa Scuola ingannatrice.',
+    keyElements: 'Copia degli effetti delle altre stanze, Guadagno di Punti Potere, Innesco di Trappole, Controllo di Evocazioni e Maghi, Replica delle Magie, Creazione di costrutti per attivare le stanze',
+    affinities: 'Distruzione, Cospirazione, Divinazione',
+    difficulty: 'Alta',
 };

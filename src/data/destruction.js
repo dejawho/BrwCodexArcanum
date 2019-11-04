@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const COSPIRATION_DATA = [
+export const DESTRUCTION_DATA = [
     {
         image: require('../../assets/schools/cospirazione/a01.png'),
         title: 'Muro di Lame - Blade Barrage',
@@ -74,11 +74,11 @@ export const COSPIRATION_DATA = [
     },
 ];
 
-export const COSPIRATION_DESCRIPTION = {
-    name: 'COSPIRAZIONE',
-    image: require('../../assets/schools/cospirazione/cospirazione.png'),
-    text: 'Un vero Maestro della Cospirazione ha un solo obiettivo: assoggettare le menti dei nemici.\nLa sua Magia è un mosaico di tradimenti, cospirazioni, bugie e sussurri. Niente può essere lasciato al caso, nessuno fugge dalla tela che questo ragno arcano tesse pazientemente, nessuno può sopravvivere alle sue trappole mortali. La Scuola è rappresentata dal simbolo astrale formato da Lune e Stella, Regina del Cielo, su sfondo viola, che simboleggia anche la corte di tutti i suoi inganni e falsità. Furti e omicidi in assoluto silenzio sono solo alcune delle spregevoli tattiche che questi maghi amano adoperare. Il Cospiratore non combatte mai in modo diretto ed in campo aperto, ma tutti conoscono e temono le sue capacità a tal punto da non aver bisogno di superflue dimostrazioni. La Scuola della Cospirazione permette ai Maghi di lanciare magie di Protezione, attivare trappole e muoversi come vento invisibile all\'interno della Loggia.Un Cospiratore risolve missioni, sottrae le missioni ai nemici e può perfino allearsi con la Rosa Nera al fine di condividerne i Punti Potere.',
-    keyElements: 'Movimento, Attivazione Stanze, Trappole che causano danni, Furto di Punti Potere e Missioni, Protezione dai Danni, Collaborazione con la Rosa Nera',
-    affinities: 'Divinazione, Illusione',
-    difficulty: 'Medio/Alta',
+export const DESTRUCTION_DESCRIPTION = {
+    name: 'DISTRUZIONE',
+    image: require('../../assets/schools/distruzione/distruzione.png'),
+    text: 'Distruzione, caos, morte e devastazione, il mago della Scuola della Distruzione non ha altri obiettivi: divorare i propri avversari, annichilire il mondo e la vita stessa. Gli elementi della natura: acqua,aria,fuoco e terra s\'inchinano alla sua volont\u00e0 e non lasciano scampo a nessuno. Questo \u00e8 il terrificante potere del Mago della Distruzione. Demoni,palle di fuoco e meteore, sono solo alcune della magie d\'attacco di questa scuola orientata ossessivamente verso un\'unica strategia: combattere i nemici in campo aperto senza tregua o riguardo per niente e nessuno. La Scuola della Distruzione è adatta solo per Maghi estremamente potenti. Ogni sua magia proviene direttamente dalle fiamme dell\'Inferno. In tempi antichi i primi Maestri della Scuola siglarono col proprio sangue un patto con i demoni infernali, in modo da ottenere incommensurabili poteri ed aprire un portale oscuro tra il nostro mondo e la dimensione demoniaca. Anche dopo svariate generazioni, i maestri di questa Scuola continuano a sacrificare il proprio sangue e le proprie anime per evocare e controllare questi orridi demoni.\n\nIl simbolo della Scuola è la fiamma eterna dell\'inferno, fonte di tutto il suo potere. La Scuola concede al Mago che la domina devastanti abilità combattive, in grado d\'infliggere pesanti danni a medio e corto raggio. Molte magie bersagliano vaste Aree, per questo motivo i Maghi tendono a colpire stanze affollate o a raggruppare gli avversari in un determinato punto utilizzando specifiche magie.',
+    keyElements: 'Danni ad Area, Danni Massivi, Distruzione di Eventi e Missioni, Blocco dei Movimenti, Posizionamento dell\'Instabilità, Conversione dell\'Instabilità',
+    affinities: 'Trasmutazione, Necromanzia, Illusione',
+    difficulty: 'Bassa',
 };

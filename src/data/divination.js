@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const COSPIRATION_DATA = [
+export const DIVINATION_DATA = [
     {
         image: require('../../assets/schools/cospirazione/a01.png'),
         title: 'Muro di Lame - Blade Barrage',
@@ -74,11 +74,11 @@ export const COSPIRATION_DATA = [
     },
 ];
 
-export const COSPIRATION_DESCRIPTION = {
-    name: 'COSPIRAZIONE',
-    image: require('../../assets/schools/cospirazione/cospirazione.png'),
-    text: 'Un vero Maestro della Cospirazione ha un solo obiettivo: assoggettare le menti dei nemici.\nLa sua Magia è un mosaico di tradimenti, cospirazioni, bugie e sussurri. Niente può essere lasciato al caso, nessuno fugge dalla tela che questo ragno arcano tesse pazientemente, nessuno può sopravvivere alle sue trappole mortali. La Scuola è rappresentata dal simbolo astrale formato da Lune e Stella, Regina del Cielo, su sfondo viola, che simboleggia anche la corte di tutti i suoi inganni e falsità. Furti e omicidi in assoluto silenzio sono solo alcune delle spregevoli tattiche che questi maghi amano adoperare. Il Cospiratore non combatte mai in modo diretto ed in campo aperto, ma tutti conoscono e temono le sue capacità a tal punto da non aver bisogno di superflue dimostrazioni. La Scuola della Cospirazione permette ai Maghi di lanciare magie di Protezione, attivare trappole e muoversi come vento invisibile all\'interno della Loggia.Un Cospiratore risolve missioni, sottrae le missioni ai nemici e può perfino allearsi con la Rosa Nera al fine di condividerne i Punti Potere.',
-    keyElements: 'Movimento, Attivazione Stanze, Trappole che causano danni, Furto di Punti Potere e Missioni, Protezione dai Danni, Collaborazione con la Rosa Nera',
-    affinities: 'Divinazione, Illusione',
+export const DIVINATION_DESCRIPTION = {
+    name: 'DIVINAZIONE',
+    image: require('../../assets/schools/divinazione/divinazione.png'),
+    text: 'I Maghi di questa Scuola sono condannati a conoscere il destino delle persone e degli oggetti. Il Mago della Divinazione viene chiamato chiaroveggente,ricercatore o indovino ma egli è tutto questo e anche di più: non è un semplice strumento degli Dei che segue ciecamente la loro volontà, ma si tratta di un vero Maestro, Padrone del tempo e dello Spazio, un vero tessitore del fato. La Scuola della Divinazione è riservata ai Maghi che conoscono e sfruttano il fato della gente e il flusso degli eventi a proprio vantaggio. I Maestri di questa Scuola non lasciano nulla al caso, ogni mossa è eseguita come se si stesse giocando una partita a scacchi, con saggezza, sagacia ed estrema intelligenza. Tramite il dono della "Vista", le clessidre e i riti sacri riesumati da pagine di storie dimenticate, il Divinatore usa magie che esplorano il passato, prevedono il futuro e alterano il presente.Il simbolo di questa Scuola è l\'cchio della Chiaroveggenza, circondato da un sole dorato che simboleggia la Luce Sacra. L\'obiettivo della Divinazione è il completo controllo del gioco, sfruttando gli eventi e le attivazioni delle Stanze della Loggia.I Maghi usano le proprie magie per guardare le carte prima di pescarle, scegliere la Luna dalla quale attingere alle missioni che preferiscono e perfino garantirne il successo senza dover muovere un dito. Posso piazzare Altari per celebrare i Riti delle Stagioni ed ottenere Punti potere in questo modo; inoltre le carte Divinazione permettono di attivare le stanze, guardare e pescare numerose missioni e magie dalla Libreria.',
+    keyElements: 'Evocazione di altari per ottenere Punti Potere e controllare il tavolo di gioco, Completamento delle Missioni, Ottenimento di Punti Potere, Cure rivolte a se stesso o alle proprie Evocazioni, Ricerca delle Carte Magia, Pesca Carte Magia',
+    affinities: 'Cospirazione, Necromanzia',
     difficulty: 'Medio/Alta',
 };
