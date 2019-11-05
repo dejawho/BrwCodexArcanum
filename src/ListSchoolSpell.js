@@ -1,15 +1,18 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, FlatList, Modal, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
+import { View, FlatList, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {COSPIRATION_DATA} from './data/cospiration';
 import SchoolSpell from './SchoolSpell';
+import {AndroidBackHandler} from 'react-navigation-backhandler';
+import {connect} from 'react-redux';
 
 class ListSchoolSpell extends React.Component {
 
   doBack = () => {
-    this.props.doBack();
+    this.props.navigation.navigate('SchoolList');
+    return true;
   }
 
   getData = () => {
@@ -25,13 +28,7 @@ class ListSchoolSpell extends React.Component {
 
   render() {
     return (
-      <Modal
-        animationType="slide"
-        transparent={false}
-        visible={this.props.isSchoolListOpen}
-        onRequestClose={() => {
-          this.doBack();
-        }}>
+      <AndroidBackHandler onBackPress={this.doBack}>
          <View style={{ flex: 1, backgroundColor: 'black' }}>
             <SafeAreaView style={[{flexDirection: 'row', backgroundColor: 'rgba(0,0,0,0.5)', paddingTop: 5, paddingBottom: 5}]}>
               <TouchableWithoutFeedback style ={{flex: 1}} onPress={()=> this.doBack()}>
@@ -48,9 +45,15 @@ class ListSchoolSpell extends React.Component {
               </SafeAreaView>
             </View>
           </View>
-      </Modal>
+      </AndroidBackHandler>
     );
   }
 }
 
-export default ListSchoolSpell;
+const mapStateToProps = state => {
+  return {
+    schoolName: state.mainReducer.spellSchool,
+  };
+};
+
+export default connect(mapStateToProps)(ListSchoolSpell);

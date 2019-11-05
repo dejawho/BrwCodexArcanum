@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, FlatList, Modal, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, FlatList, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {COSPIRATION_DESCRIPTION} from './data/cospiration';
 import {DESTRUCTION_DESCRIPTION} from './data/destruction';
@@ -11,13 +11,15 @@ import {NECROMANCY_DESCRIPTION} from './data/necromancy';
 import {TRASMUTATION_DESCRIPTION} from './data/trasmutation';
 import {FORGOTTEN_DESCRIPTION} from './data/forgotten';
 import Image from 'react-native-scalable-image';
+import {AndroidBackHandler} from 'react-navigation-backhandler';
 
 const SCHOOLS = [COSPIRATION_DESCRIPTION,DESTRUCTION_DESCRIPTION, DIVINATION_DESCRIPTION, ILLUSION_DESCRIPTION, NECROMANCY_DESCRIPTION,TRASMUTATION_DESCRIPTION, FORGOTTEN_DESCRIPTION];
 
 class SchoolDescription extends React.Component {
 
   doBack = () => {
-    this.props.doBack();
+    this.props.navigation.navigate('Home');
+    return true;
   }
 
   renderItem = ({item, index}) => {
@@ -33,13 +35,7 @@ class SchoolDescription extends React.Component {
 
   render() {
     return (
-      <Modal
-        animationType="slide"
-        transparent={false}
-        visible={this.props.isOpen}
-        onRequestClose={() => {
-          this.doBack();
-        }}>
+      <AndroidBackHandler onBackPress={this.doBack}>
         <View style={{ flex: 1, backgroundColor: 'black'}}>
             <SafeAreaView style={[{flexDirection: 'row', backgroundColor: 'rgba(0,0,0,0.5)', paddingTop: 5, paddingBottom: 5}]}>
               <TouchableWithoutFeedback style ={{flex: 1}} onPress={()=> this.doBack()}>
@@ -56,7 +52,7 @@ class SchoolDescription extends React.Component {
               </SafeAreaView>
             </View>
         </View>
-      </Modal>
+      </AndroidBackHandler>
     );
   }
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, FlatList, Modal, SafeAreaView, TouchableWithoutFeedback, Image } from 'react-native';
+import { View, Text, FlatList, SafeAreaView, TouchableWithoutFeedback, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { MAGES_DATA } from './data/mages';
 import ScalableImage from 'react-native-scalable-image';
@@ -13,13 +13,15 @@ import { ILLUSION_DESCRIPTION } from './data/illusion';
 import { NECROMANCY_DESCRIPTION } from './data/necromancy';
 import { TRASMUTATION_DESCRIPTION } from './data/trasmutation';
 import { FORGOTTEN_DESCRIPTION } from './data/forgotten';
+import {AndroidBackHandler} from 'react-navigation-backhandler';
 
 const SEPARATOR = require('../assets/div.png');
 
 class MagesDescription extends React.Component {
 
   doBack = () => {
-    this.props.doBack();
+    this.props.navigation.navigate('Home');
+    return true;
   }
 
   getSchoolImage = (schoolName) => {
@@ -87,13 +89,7 @@ class MagesDescription extends React.Component {
 
   render() {
     return (
-      <Modal
-        animationType="slide"
-        transparent={false}
-        visible={this.props.isOpen}
-        onRequestClose={() => {
-          this.doBack();
-        }}>
+      <AndroidBackHandler onBackPress={this.doBack}>
         <View style={{ flex: 1, backgroundColor: 'black' }}>
           <SafeAreaView style={[{ flexDirection: 'row', backgroundColor: 'rgba(0,0,0,0.5)', paddingTop: 5, paddingBottom: 5 }]}>
             <TouchableWithoutFeedback style={{ flex: 1 }} onPress={() => this.doBack()}>
@@ -111,7 +107,7 @@ class MagesDescription extends React.Component {
             </SafeAreaView>
           </View>
         </View>
-      </Modal>
+      </AndroidBackHandler>
     );
   }
 }
