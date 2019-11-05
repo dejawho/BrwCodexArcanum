@@ -10,19 +10,19 @@ export const COSPIRATION_DATA = [
         image: require('../../assets/schools/cospirazione/a02.png'),
         title: 'Patto di Sangue - Blood Pact',
         effect: 'Nel momento in cui un Mago entra nella stanza della Rosa Nera, puoi scegliere di rivelare questa trappola per rubare una delle sue Missione risolte e 2 Punti Potere. Non puoi rubare Missioni e/o Punti Potere se non ne ha.',
-        reverseEffect: 'Nel momento in cui un Mago entra in una stanza Viola, puoi scegliere di rivelare questa trappola per rubargli 2 Punti Vittoria; inoltre il Mago non pu\u00f2 muovere usando Azioni Fisiche fino alla fine del turno. Questo effetto termina se il Mago \u00e8 mandato nella sua Cella.',
+        reverseEffect: 'Nel momento in cui un Mago entra in una stanza Viola, puoi scegliere di rivelare questa trappola per rubargli 2 Punti Vittoria; inoltre il Mago non può muovere usando Azioni Fisiche fino alla fine del turno. Questo effetto termina se il Mago è mandato nella sua Cella.',
     },
     {
         image: require('../../assets/schools/cospirazione/a03.png'),
         title: 'Danza di Morte - Dance of Death',
         effect: 'Nel momento in cui un Mago ha appena risolto una Azione Fisica puoi rivelare questa trappola: infliggi 1 danno a quel Mago, poi muovilo di un Passo in una stanza adiacente.',
-        reverseEffect: 'Nel momento in cui un Mago ha appena risolto una Azione Fisica puoi rivelare questa trappola: puoi muovere lui e un altro modello nella sua stessa stanza di un Passo in una stanza adiacente (la stanza deve essere la stessa per entrambi i modelli, il movimento dei due modelli \u00e8 contemporaneo). Guadagni 1 Punto Potere.',
+        reverseEffect: 'Nel momento in cui un Mago ha appena risolto una Azione Fisica puoi rivelare questa trappola: puoi muovere lui e un altro modello nella sua stessa stanza di un Passo in una stanza adiacente (la stanza deve essere la stessa per entrambi i modelli, il movimento dei due modelli è contemporaneo). Guadagni 1 Punto Potere.',
     },
     {
         image: require('../../assets/schools/cospirazione/a04.png'),
         title: 'Vento Ingannatore - Deceiving Wind',
         effect: 'Puoi rivelare questa Protezione la prossima volta che subisci danni: riduci i danni subiti di 3. Guadagni 1 Punto Potere.',
-        reverseEffect: 'Puoi rivelare questa Protezione se sei il bersaglio di una Magia a bersaglio singolo. Devia la Magia su un altro modello (valido per la Magia) entro 1 stanza da te. Se non ci sono bersagli validi, cancella la Magia. La Magia deviata \u00e8 sempre considerata del Mago che la ha lanciata.',
+        reverseEffect: 'Puoi rivelare questa Protezione se sei il bersaglio di una Magia a bersaglio singolo. Devia la Magia su un altro modello (valido per la Magia) entro 1 stanza da te. Se non ci sono bersagli validi, cancella la Magia. La Magia deviata è sempre considerata del Mago che la ha lanciata.',
     },
     {
         image: require('../../assets/schools/cospirazione/a05.png'),

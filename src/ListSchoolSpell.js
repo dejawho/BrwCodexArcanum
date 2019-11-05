@@ -4,6 +4,12 @@ import React from 'react';
 import { View, FlatList, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {COSPIRATION_DATA} from './data/cospiration';
+import {DESTRUCTION_DATA} from './data/destruction';
+import {ILLUSION_DATA} from './data/illusion';
+import {DIVINATION_DATA} from './data/divination';
+import {NECROMANCY_DATA} from './data/necromancy';
+import {TRASMUTATION_DATA} from './data/trasmutation';
+import {FORGOTTEN_DATA} from './data/forgotten';
 import SchoolSpell from './SchoolSpell';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
 import {connect} from 'react-redux';
@@ -16,14 +22,30 @@ class ListSchoolSpell extends React.Component {
   }
 
   getData = () => {
-    if (this.props.schoolName === 'Cospirazione'){
-      return COSPIRATION_DATA;
+    switch (this.props.schoolName ) {
+      case 'Cospirazione':
+        return COSPIRATION_DATA;
+      case 'Distruzione':
+        return DESTRUCTION_DATA;
+      case 'Divinazione':
+        return DIVINATION_DATA;
+      case 'Illusione':
+        return ILLUSION_DATA;
+      case 'Necromanzia':
+        return NECROMANCY_DATA;
+      case 'Trasmutazione':
+        return TRASMUTATION_DATA;
+      case 'Dimenticata':
+        return FORGOTTEN_DATA;
+      default:
+        return undefined;
     }
-    return [];
   }
 
   renderItem = ({item, index}) => {
-    return <View style={{flex: 1, backgroundColor: (index % 2 === 0 ? 'white' : 'lightgray')}}><SchoolSpell title={item.title} image={item.image} effect={item.effect} reverseEffect={item.reverseEffect}/></View>;
+    return <View style={{flex: 1, backgroundColor: (index % 2 === 0 ? 'white' : 'lightgray')}}>
+                <SchoolSpell title={item.title} image={item.image} effect={item.effect} reverseEffect={item.reverseEffect} evocationStats={item.evocationStats} reverseEvocationStats={item.reverseEvocationStats}/>
+            </View>;
   }
 
   render() {

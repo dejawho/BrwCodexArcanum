@@ -37,3 +37,19 @@ export const MAGES_DATA = [
         favouriteSchool: 'destruction',
     },
 ];
+
+
+export const EVOCATIONS_DATA = [
+    {
+        name: 'Velocità',
+        image: require('../../assets/evocations/speed.png'),
+    },
+    {
+        name: 'Forza',
+        image: require('../../assets/evocations/strenght.png'),
+    },
+    {
+        name: 'Vita',
+        image: require('../../assets/evocations/health.png'),
+    },
+];
