@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
+import { View, SafeAreaView, TouchableWithoutFeedback, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
 import Image from 'react-native-scalable-image';
@@ -38,7 +38,9 @@ class SchoolsOfMagic extends React.Component {
             </TouchableWithoutFeedback>
           </SafeAreaView>
           <SafeAreaView style={{flex: 1, backgroundColor: 'white'}} onLayout={this.imageContainerLayout}>
-            {this.state.width !== 0 ? <Image width={this.state.imageContainerWidth} source={REFERENCE_1}/> : null}
+            <ScrollView>
+              {this.state.width !== 0 ? <Image width={this.state.imageContainerWidth} source={REFERENCE_1}/> : null}
+            </ScrollView>
           </SafeAreaView>
         </View>
         </AndroidBackHandler>
