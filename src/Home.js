@@ -44,8 +44,8 @@ class Home extends React.Component {
     this.props.navigation.navigate('RoomsEffects');
   }
 
-  showSchoolOfMagic = () => {
-    this.props.navigation.navigate('SchoolsOfMagic');
+  showReference = () => {
+    this.props.navigation.navigate('Reference');
   }
 
   render() {
@@ -58,9 +58,9 @@ class Home extends React.Component {
             <Image height={imageHeight} source={schoolImage} onPress={this.showSchoolDescription}/>
             <Image height={imageHeight} source={magesImage} onPress={this.showMagesDescription}/>
             <View style={{ flexDirection: 'row', alignContent: 'center' }}>
-              <Image height={imageHeight} width={100}  source={roomImage} onPress={this.showSchoolOfMagic}/>
+              <Image height={imageHeight} width={100}  source={roomImage} onPress={this.showRoomEffects}/>
               <Text style={{width: 50}}/>
-              <Image height={imageHeight} width={100} source={referenceImage} onPress={this.showRoomEffects}/>
+              <Image height={imageHeight} width={100} source={referenceImage} onPress={this.showReference}/>
             </View>
           </SafeAreaView>
         </ImageBackground>

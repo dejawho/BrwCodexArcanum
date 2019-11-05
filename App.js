@@ -13,7 +13,7 @@ import SchoolDescription from './src/SchoolDescription';
 import SchoolList from './src/SchoolList';
 import ListSchoolSpell from './src/ListSchoolSpell';
 import RoomsEffects from './src/RoomsEffects';
-import SchoolsOfMagic from './src/SchoolsOfMagic';
+import Reference from './src/Reference';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { View } from 'react-native';
@@ -45,8 +45,8 @@ const TabNavigator = createBottomTabNavigator({
   RoomsEffects: {
     screen: RoomsEffects,
   },
-  SchoolsOfMagic: {
-    screen: SchoolsOfMagic,
+  Reference: {
+    screen: Reference,
   },
 },
 {

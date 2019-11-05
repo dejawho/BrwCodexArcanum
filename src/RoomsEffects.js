@@ -1,50 +1,44 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, ScrollView, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
+import { View, FlatList, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
-import Image from 'react-native-scalable-image';
+import {ROOMS_DATA} from './data/rooms';
+import RoomEntry from './RoomEntry';
 
-
-const REFERENCE_1 = require('../assets/room_effect01.jpg');
-
-const REFERENCE_2 = require('../assets/room_effect02.jpg');
 
 class RoomsEffects extends React.Component {
-
-  state = {
-    imageContainerWidth: 0,
-    imageContainerHeight: 0,
-  }
 
   onBack = () => {
     this.props.navigation.navigate('Home');
     return true;
   }
 
-  imageContainerLayout = (event) => {
-    const { width, height } = event.nativeEvent.layout;
-    if (this.state.imageContainerWidth !== width || this.state.imageContainerHeight !== height) {
-      this.setState({ imageContainerHeight: height, imageContainerWidth: width });
-    }
+  renderItem = ({item, index}) => {
+    return <View style={{flex: 1, backgroundColor: (index % 2 === 0 ? 'white' : 'lightgray')}}>
+                <RoomEntry room={item}/>
+            </View>;
   }
 
   render() {
     return (
       <AndroidBackHandler onBackPress={this.onBack}>
-        <View style={{ flex: 1, backgroundColor: 'black' }} onLayout={this.imageContainerLayout}>
+        <View style={{ flex: 1, backgroundColor: 'black' }}>
           <SafeAreaView style={[{flexDirection: 'row', backgroundColor: 'rgba(0,0,0,0.5)', paddingTop: 5, paddingBottom: 5}]}>
             <TouchableWithoutFeedback style ={{flex: 1}} onPress={()=> this.onBack()}>
               <Icon size={40} style={{ paddingLeft: 10, flex: 1}} name="ios-backspace" color="grey" />
             </TouchableWithoutFeedback>
           </SafeAreaView>
-          <SafeAreaView style={{flex: 1}}>
-            <ScrollView>
-              <Image width={this.state.imageContainerWidth} source={REFERENCE_1}/>
-              <Image width={this.state.imageContainerWidth} source={REFERENCE_2}/>
-            </ScrollView>
-          </SafeAreaView>
+          <View style={{ flex: 1, alignItems: 'stretch' }}>
+              <SafeAreaView style={{flex:1}}>
+              <FlatList
+                  data={ROOMS_DATA}
+                  renderItem={this.renderItem}
+                  keyExtractor={item => item.name}
+                />
+              </SafeAreaView>
+            </View>
         </View>
         </AndroidBackHandler>
     );
