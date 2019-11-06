@@ -13,6 +13,7 @@ import { ILLUSION_DESCRIPTION } from './data/illusion';
 import { NECROMANCY_DESCRIPTION } from './data/necromancy';
 import { TRASMUTATION_DESCRIPTION } from './data/trasmutation';
 import { FORGOTTEN_DESCRIPTION } from './data/forgotten';
+import { MYTHOLOGIC_DESCRIPTION } from './data/mythologic';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
 
 const SEPARATOR = require('../assets/div.png');
@@ -40,6 +41,8 @@ class MagesDescription extends React.Component {
         return TRASMUTATION_DESCRIPTION.image;
       case 'forgotten':
         return FORGOTTEN_DESCRIPTION.image;
+      case 'mythologic':
+        return MYTHOLOGIC_DESCRIPTION.image;
       default:
         return undefined;
     }
@@ -61,6 +64,8 @@ class MagesDescription extends React.Component {
         return TRASMUTATION_DESCRIPTION.name;
       case 'forgotten':
         return FORGOTTEN_DESCRIPTION.name;
+      case 'mythologic':
+        return MYTHOLOGIC_DESCRIPTION.name;
       default:
         return undefined;
     }
@@ -75,12 +80,20 @@ class MagesDescription extends React.Component {
 
 
   renderItem = ({ item, index }) => {
+    const spellData = {title: item.personalSpell,
+                       set: item.set,
+                       effect: item.personalSpellEffect,
+                       reverseEffect: item.personalSpellReverseEffect,
+                       image: item.personalSpellImage,
+                       evocationStats: item.spellEvocationStats,
+                       reverseEvocationStats: item.reverseSpellEvocationStats,
+                      };
     return (<View style={{ flex: 1, marginVertical: 3, marginLeft: 10, marginRight: 10 }}>
       <Text style={{ fontSize: 25, fontWeight: 'bold', alignSelf: 'center' }}>{item.name}</Text>
       <ScalableImage source={item.image} width={200} style={{ resizeMode: 'contain', alignSelf: 'center' }} />
       <Text style={{ fontWeight: 'bold', fontSize: 18, alignSelf: 'center' }}>Magia Personale</Text>
       <View style={{ alignSelf: 'stretch' }}>
-        <SchoolSpell title={item.personalSpell} image={item.personalSpellImage} effect={item.personalSpellEffect} reverseEffect={item.personalSpellReverseEffect} />
+        <SchoolSpell data={spellData}/>
       </View>
       <ScalableImage source={this.getSchoolImage(item.favouriteSchool)} width={120} style={{ resizeMode: 'contain', alignSelf: 'center' }} />
       <Text style={{ fontWeight: 'bold', fontSize: 18, alignSelf: 'center' }}>{this.getSchoolName(item.favouriteSchool)}</Text>

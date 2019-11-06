@@ -89,7 +89,8 @@ export const ROOMS_DATA = [
         image: require('../../assets/rooms/summonerroom.png'),
         instability: 6,
         points: 3,
-        effect: 'Evoca 1 Cerbero sotto il tuo controllo. Cerbero ha le seguenti caratteristiche: M:2 A:2 V:3 Quando Cerbero attacca, converte anche 1 danno sul bersaglio.',
+        effect: 'Evoca 1 Cerbero sotto il tuo controllo. Cerbero ha le seguenti caratteristiche:{evocationStats}Quando Cerbero attacca, converte anche 1 danno sul bersaglio.',
+        evocationStats: [{type: 'speed', value: 2}, {type: 'strength', value: 2}, {type: 'health', value: 3}],
     },
     {
         name: 'Armory',
@@ -133,5 +134,33 @@ export const ROOMS_DATA = [
         instability: 6,
         points: 3,
         effect: 'Infliggi 1 danno a un modello in gioco. Non puoi bersagliare un Mago nella sua Cella.',
+    },
+    {
+        name: 'Room of Corrupt Power',
+        image: require('../../assets/rooms/roomofcorruptpower.png'),
+        instability: 3,
+        set: 'Crono',
+        effect: 'Il giocatore che ha la corona perde 1 punto potere, poi prendi la corona. La stanza degli specchi non può copiare questo potere',
+    },
+    {
+        name: 'Sanctuary of Flames',
+        image: require('../../assets/rooms/sanctuaryofflames.png'),
+        instability: 3,
+        set: 'Crono',
+        effect: 'Pesca 2 carte dal tuo grimorio ed infliggi 1 danno per ogni magia di combattimento ad un bersaglio entro distanza 1 dal santuario.',
+    },
+    {
+        name: 'Hell\'s Door',
+        image: require('../../assets/rooms/hellsdoor.png'),
+        instability: 3,
+        set: 'Crono',
+        effect: 'Al costo di 1 punto potere evoca un Cavaliere D\'Ossa.',
+    },
+    {
+        name: 'Training Room',
+        image: require('../../assets/rooms/trainingroom.png'),
+        instability: 3,
+        set: 'Crono',
+        effect: 'Puoi muoverti ed attaccare, poi per ogni danno inflitto guarisci 1 tuo danno',
     },
 ];

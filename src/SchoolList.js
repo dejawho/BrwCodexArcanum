@@ -7,7 +7,7 @@ import {AndroidBackHandler} from 'react-navigation-backhandler';
 import {connect} from 'react-redux';
 import {setSpellSchool} from './store/actions/actions';
 
-const DATA = ['Cospirazione', 'Distruzione', 'Divinazione', 'Illusione', 'Necromanzia', 'Trasmutazione', 'Dimenticata'];
+const DATA = ['Cospirazione', 'Distruzione', 'Divinazione', 'Illusione', 'Necromanzia', 'Trasmutazione', 'Dimenticata', 'Mitologica'];
 
 class SchoolList extends React.Component {
 

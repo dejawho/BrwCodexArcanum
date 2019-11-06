@@ -47,18 +47,31 @@ class RoomEntry extends React.Component {
       effect = <Text style={{ fontSize: 17 }}>{this.props.room.effect}</Text>;
     }
 
+    let set = null;
+    if (this.props.room.set){
+      set = <View style={{ flexDirection: 'row', paddingTop: 5 }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', fontStyle: 'italic' }}>Espansione:</Text>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', paddingLeft: 3 }}>{this.props.room.set}</Text>
+      </View>;
+    }
+
+    let points = null;
+    if (this.props.room.points){
+      points = <View style={{ flexDirection: 'row' }}>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', fontStyle: 'italic' }}>Punti:</Text>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', paddingLeft: 3 }}>{this.props.room.points}</Text>
+          </View>;
+    }
     return (
-      <View style={{ flex: 1, flexDirection: 'column', paddingLeft: 5, paddingRight: 5, justifyContent: 'center' }}>
+      <View style={{ flex: 1, flexDirection: 'column', paddingLeft: 5, paddingRight: 5, justifyContent: 'center', marginVertical: 3 }}>
         <Text style={{ fontSize: 30, fontWeight: 'bold', paddingBottom: 5, textAlign: 'center' }}>{this.props.room.name}</Text>
         <ScalableImage source={this.props.room.image} height={100} style={{ resizeMode: 'contain', alignSelf: 'center' }} />
+        {set}
         <View style={{ flexDirection: 'row', paddingTop: 5 }}>
           <Text style={{ fontSize: 17, fontWeight: 'bold', fontStyle: 'italic' }}>Instabilità:</Text>
           <Text style={{ fontSize: 17, fontWeight: 'bold', paddingLeft: 3 }}>{this.props.room.instability}</Text>
         </View>
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={{ fontSize: 17, fontWeight: 'bold', fontStyle: 'italic' }}>Punti:</Text>
-          <Text style={{ fontSize: 17, fontWeight: 'bold', paddingLeft: 3 }}>{this.props.room.points}</Text>
-        </View>
+        {points}
         <Text style={{ fontSize: 17, fontWeight: 'bold', fontStyle: 'italic', alignSelf: 'flex-start' }}>Effetto:</Text>
         {effect}
       </View>

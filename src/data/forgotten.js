@@ -61,6 +61,14 @@ export const FORGOTTEN_DATA = [
         effect: 'Puoi scambiare 2 delle tue Magie in gioco (pronte o rivelate) con 2 dalla tua mano. Risolvi immediatamente gli effetti di queste Magie, nell\'ordine in cui le hai piazzate, come se fossero entrambe due Magie Standard. Trappole e Protezioni entrano in gioco gi\u00e0 attive e si rivelano come specificato dalle loro regole. Guadagni 2 Punti Potere.',
         reverseEffect: 'Ogni Mago deve scartare nelle sue Memorie una sua Magia non ancora risolta, o non ancora rivelata (nel caso di Trappole o Protezioni). Guadagni 4 Punti Potere.',
     },
+    {
+        image: require('../../assets/schools/dimenticata/g10.png'),
+        title: 'Crono, l\'Eterno - Crono the Eternal',
+        effect: 'Perdi 3 punti potere per giocare fino a 4 carte magia dalla tua mano. Puoi rimpiazzare magie pronte o rivelate che siano sulla scheda del mago (es. puoi giocare 2 magie dalla tua mano se hai preparato 1 magia standard ed 1 rapida)',
+        reverseEffect: 'Evoca Crono con le seguenti caratteristiche:{evocationStats}X è il numero di giocatori moltiplicato per 5. Quando Crono viene attivato piazza un\'instabilità su ogni stanza adiacente. Crono non puoi essere spostato o rimosso da nessun effetto',
+        reverseEvocationStats: [{type: 'speed', value: 0}, {type: 'strength', value: 0}, {type: 'health', value: '(X)'}],
+        set: 'Crono',
+    },
 ];
 
 export const FORGOTTEN_DESCRIPTION = {

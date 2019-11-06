@@ -58,7 +58,9 @@ class Home extends React.Component {
             <Image height={imageHeight} source={schoolImage} onPress={this.showSchoolDescription}/>
             <Image height={imageHeight} source={magesImage} onPress={this.showMagesDescription}/>
             <View style={{ flexDirection: 'row', alignContent: 'center' }}>
-              <Image height={imageHeight} width={100}  source={roomImage} onPress={this.showRoomEffects}/>
+              <View style={{justifyContent: 'center'}}>
+                <Image height={imageHeight} width={100}  source={roomImage} onPress={this.showRoomEffects}/>
+              </View>
               <Text style={{width: 50}}/>
               <Image height={imageHeight} width={100} source={referenceImage} onPress={this.showReference}/>
             </View>

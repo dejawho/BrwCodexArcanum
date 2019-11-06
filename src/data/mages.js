@@ -36,6 +36,16 @@ export const MAGES_DATA = [
         image: require('../../assets/mages/nero.jpg'),
         favouriteSchool: 'destruction',
     },
+    {
+        name: 'Medusa',
+        personalSpell: 'Veleno Gorgone',
+        personalSpellImage: require('../../assets/schools/personal/h05.png'),
+        personalSpellEffect: 'Infliggi 2 danni al bersaglio. Poi se il bersaglio è un mago infliggigli 1 danno per ogni sua missione completata.',
+        personalSpellReverseEffect: 'Infliggi 2 danni al bersaglio. Poi se il bersaglio è un mago infliggigli 1 danno per ogni tua missione completata.',
+        image: require('../../assets/mages/medusa.png'),
+        favouriteSchool: 'mythologic',
+        set: 'Crono',
+    },
 ];
 
 

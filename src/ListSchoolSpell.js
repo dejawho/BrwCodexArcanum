@@ -10,6 +10,7 @@ import {DIVINATION_DATA} from './data/divination';
 import {NECROMANCY_DATA} from './data/necromancy';
 import {TRASMUTATION_DATA} from './data/trasmutation';
 import {FORGOTTEN_DATA} from './data/forgotten';
+import {MYTHOLOGIC_DATA} from './data/mythologic';
 import SchoolSpell from './SchoolSpell';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
 import {connect} from 'react-redux';
@@ -37,6 +38,8 @@ class ListSchoolSpell extends React.Component {
         return TRASMUTATION_DATA;
       case 'Dimenticata':
         return FORGOTTEN_DATA;
+      case 'Mitologica':
+        return MYTHOLOGIC_DATA;
       default:
         return undefined;
     }
@@ -44,7 +47,7 @@ class ListSchoolSpell extends React.Component {
 
   renderItem = ({item, index}) => {
     return <View style={{flex: 1, backgroundColor: (index % 2 === 0 ? 'white' : 'lightgray')}}>
-                <SchoolSpell title={item.title} image={item.image} effect={item.effect} reverseEffect={item.reverseEffect} evocationStats={item.evocationStats} reverseEvocationStats={item.reverseEvocationStats}/>
+                <SchoolSpell data={item}/>
             </View>;
   }
 
