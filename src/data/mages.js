@@ -46,6 +46,26 @@ export const MAGES_DATA = [
         favouriteSchool: 'mythologic',
         set: 'Crono',
     },
+    {
+        name: 'Marco',
+        personalSpell: 'Invisibilità',
+        personalSpellImage: require('../../assets/schools/personal/h06.png'),
+        personalSpellEffect: 'Puoi attivare questa protezione quando vieni bersagliato da una magia. Cancella il suo effetto, poi guadagna 1 punto potere.',
+        personalSpellReverseEffect: 'Puoi attivare questa protezione quando vieni bersagliato da una magia di combattimento. Ignora l\'effetto di questa magia e scegli uno dei seguenti effetti:\nFelice: guadagni 1 punto potere.\nTriste: spostati nella stanza di chi ha lanciato la magia ed infliggigli 1 danno.',
+        image: require('../../assets/mages/marco.png'),
+        favouriteSchool: 'illusion',
+        set: 'Hidden Thorns',
+    },
+    {
+        name: 'Geneve',
+        personalSpell: 'Danza della Morte',
+        personalSpellImage: require('../../assets/schools/personal/h07.png'),
+        personalSpellEffect: 'Spostati nella stanza del bersaglio, poi muovi il tuo mago ed il bersaglio fino a 2 stanze di distanza. Per ogni stanza attraversata infliggi 1 danno al bersaglio.',
+        personalSpellReverseEffect: 'Spostati nella stanza del bersaglio, poi muovi il tuo mago ed il bersaglio in una stanza adiacente. Ruba 1 punto potere dal bersaglio.',
+        image: require('../../assets/mages/geneve.png'),
+        favouriteSchool: 'cospiration',
+        set: 'Hidden Thorns',
+    },
 ];
 
 
