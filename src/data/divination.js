@@ -37,6 +37,7 @@ export const DIVINATION_DATA = [
         image: require('../../assets/schools/divinazione/c12.png'),
         title: 'Rito dell\'Inverno - Winter Rite',
         effect: 'Rimuovi un Altare Divino dalla stanza bersaglio (l\'Altare può essere di un qualunque giocatore). Puoi scambiare una tua Magia in gioco, attivata o Pronta (inclusa questa), con una nella tua mano. Risolvi immediatamente l\u2019effetto della nuova Magia. Se giochi una Trappola o una Protezione, entra gi\u00e0 attiva. Guadagni 1 Punto Potere.',
+        reverseEffect: 'Evoca 1 Altare Divino nella tua stanza. Guadagna 1 Punto Potere per ogni Altare Divino in gioco di qualsiasi giocatore. L’Altare Divino ha le seguenti caratteristiche:',
         reverseEvocationStats: [{type: 'speed', value: 0}, {type: 'strength', value: 0}, {type: 'health', value: 4}],
     },
     {

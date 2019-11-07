@@ -3,6 +3,8 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 import EvocationStats from './EvocationStats';
+import ScalableImage from 'react-native-scalable-image';
+
 
 class SchoolSpell extends React.Component {
 
@@ -55,17 +57,17 @@ class SchoolSpell extends React.Component {
 
     let set = null;
     if (this.props.data.set){
-      set = <View style={{flexDirection: 'row'}}>
-              <Text style={{fontSize: 17, fontWeight: 'bold', fontStyle: 'italic', paddingTop: 2, paddingBottom: 2}}>Espansione:</Text>
+      set = <View style={{flexDirection: 'row', paddingTop: 2, paddingBottom: 2}}>
+              <Text style={{fontSize: 17, fontWeight: 'bold', fontStyle: 'italic', paddingRight: 5}}>Espansione:</Text>
               <Text style={{fontSize: 17}}>{this.props.data.set}</Text>
             </View>;
     }
     return (
       <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 5, paddingRight: 5}}>
              <View style ={{flex: 1, justifyContent: 'center'}} onLayout={this.imageContainerLayout}>
-                {this.props.data.image ?  <Image source={this.props.data.image} style={{resizeMode: 'contain', width: imageWidth}}/> : null}
+                {this.props.data.image ?  <ScalableImage source={this.props.data.image} width={imageWidth}/> : null}
              </View>
-            <View style={{flex: 2, flexDirection: 'column', paddingLeft: 3}}>
+            <View style={{flex: 2, flexDirection: 'column', paddingLeft: 5}}>
               <Text style={{fontSize: 30, fontWeight: 'bold'}}>{this.props.data.title}</Text>
               {set}
               <Text style={{fontSize: 17, fontWeight: 'bold', fontStyle: 'italic', paddingTop: 2, paddingBottom: 2}}>Effetto</Text>

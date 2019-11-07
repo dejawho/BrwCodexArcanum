@@ -140,7 +140,7 @@ export const ROOMS_DATA = [
         image: require('../../assets/rooms/roomofcorruptpower.png'),
         instability: 3,
         set: 'Crono',
-        effect: 'Il giocatore che ha la corona perde 1 punto potere, poi prendi la corona. La stanza degli specchi non può copiare questo potere',
+        effect: 'Il giocatore che ha la corona perde 1 punto potere, poi prendi la corona. La stanza degli specchi non può copiare questo potere.',
     },
     {
         name: 'Sanctuary of Flames',
@@ -161,6 +161,6 @@ export const ROOMS_DATA = [
         image: require('../../assets/rooms/trainingroom.png'),
         instability: 3,
         set: 'Crono',
-        effect: 'Puoi muoverti ed attaccare, poi per ogni danno inflitto guarisci 1 tuo danno',
+        effect: 'Puoi muoverti ed attaccare, poi per ogni danno inflitto guarisci 1 tuo danno.',
     },
 ];

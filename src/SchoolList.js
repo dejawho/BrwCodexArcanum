@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
 import {connect} from 'react-redux';
 import {setSpellSchool} from './store/actions/actions';
+import {withNavigation} from 'react-navigation';
 
 const DATA = ['Cospirazione', 'Distruzione', 'Divinazione', 'Illusione', 'Necromanzia', 'Trasmutazione', 'Dimenticata', 'Mitologica'];
 
@@ -68,4 +69,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SchoolList);
+export default withNavigation(connect(mapStateToProps, mapDispatchToProps)(SchoolList));

@@ -17,10 +17,27 @@ import {connect} from 'react-redux';
 
 class ListSchoolSpell extends React.Component {
 
+  flatListRef = null;
+
   doBack = () => {
     this.props.navigation.navigate('SchoolList');
     return true;
   }
+
+  componentDidMount = () => {
+    const { navigation } = this.props;
+    this.focusListener = navigation.addListener('didFocus', () => {
+      if (this.flatListRef !== null) {
+        this.flatListRef.scrollToOffset({ animated: false, offset: 0 });
+      }
+    });
+  }
+
+  componentWillUnmount = () => {
+    // Remove the event listener
+    this.focusListener.remove();
+  }
+
 
   getData = () => {
     switch (this.props.schoolName ) {
@@ -63,6 +80,7 @@ class ListSchoolSpell extends React.Component {
             <View style={{ flex: 1, alignItems: 'stretch' }}>
               <SafeAreaView style={{flex:1}}>
               <FlatList
+                  ref={(ref) => { this.flatListRef = ref; }}
                   data={this.getData()}
                   renderItem={this.renderItem}
                   keyExtractor={item => item.title}
