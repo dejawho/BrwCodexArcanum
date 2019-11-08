@@ -116,6 +116,7 @@ class MagesDescription extends React.Component {
                 renderItem={this.renderItem}
                 keyExtractor={item => item.name}
                 ItemSeparatorComponent= {this.FlatListItemSeparator}
+                initialNumToRender={4}
               />
             </SafeAreaView>
           </View>

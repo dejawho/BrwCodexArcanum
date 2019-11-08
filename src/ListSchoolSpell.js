@@ -84,6 +84,7 @@ class ListSchoolSpell extends React.Component {
                   data={this.getData()}
                   renderItem={this.renderItem}
                   keyExtractor={item => item.title}
+                  initialNumToRender={4}
                 />
               </SafeAreaView>
             </View>

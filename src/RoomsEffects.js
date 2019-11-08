@@ -36,6 +36,7 @@ class RoomsEffects extends React.Component {
                   data={ROOMS_DATA}
                   renderItem={this.renderItem}
                   keyExtractor={item => item.name}
+                  initialNumToRender={8}
                 />
               </SafeAreaView>
             </View>

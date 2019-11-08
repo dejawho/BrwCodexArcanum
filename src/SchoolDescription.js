@@ -49,6 +49,7 @@ class SchoolDescription extends React.Component {
                   data={SCHOOLS}
                   renderItem={this.renderItem}
                   keyExtractor={item => item.name}
+                  initialNumToRender={4}
                 />
               </SafeAreaView>
             </View>
