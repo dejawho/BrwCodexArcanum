@@ -1,20 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, FlatList, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, FlatList, SafeAreaView, TouchableWithoutFeedback, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {COSPIRATION_DESCRIPTION} from './data/cospiration';
-import {DESTRUCTION_DESCRIPTION} from './data/destruction';
-import {DIVINATION_DESCRIPTION} from './data/divination';
-import {ILLUSION_DESCRIPTION} from './data/illusion';
-import {NECROMANCY_DESCRIPTION} from './data/necromancy';
-import {TRASMUTATION_DESCRIPTION} from './data/trasmutation';
-import {MYTHOLOGIC_DESCRIPTION} from './data/mythologic';
-import {FORGOTTEN_DESCRIPTION} from './data/forgotten';
-import Image from 'react-native-scalable-image';
+import ScalableImage from 'react-native-scalable-image';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
+import {SCHOOLS_DESCRIPTIONS_DATA} from './data/schools';
 
-const SCHOOLS = [COSPIRATION_DESCRIPTION,DESTRUCTION_DESCRIPTION, DIVINATION_DESCRIPTION, ILLUSION_DESCRIPTION, NECROMANCY_DESCRIPTION,TRASMUTATION_DESCRIPTION, MYTHOLOGIC_DESCRIPTION, FORGOTTEN_DESCRIPTION];
+const SEPARATOR = require('../assets/div.png');
 
 class SchoolDescription extends React.Component {
 
@@ -23,9 +16,17 @@ class SchoolDescription extends React.Component {
     return true;
   }
 
+  FlatListItemSeparator = () => {
+    return (
+      //Item Separator
+      <Image source={SEPARATOR} style={{resizeMode: 'stretch', width: '100%', height: 15}}/>
+    );
+  };
+
+
   renderItem = ({item, index}) => {
-    return (<View style={{flex: 1, marginVertical: 3, marginLeft: 10, marginRight: 10 }}>
-        <Image source={item.image} width={100} style={{resizeMode: 'contain', alignSelf: 'center'}}/>
+    return (<View style={{flex: 1, marginVertical: 6, marginLeft: 10, marginRight: 10 }}>
+        <ScalableImage source={item.image} width={100} style={{resizeMode: 'contain', alignSelf: 'center'}}/>
         <Text style={{fontSize: 25, fontWeight: 'bold', alignSelf: 'center'}}>{item.name}</Text>
         <Text style={{alignSelf: 'stretch', fontSize: 18}}>{item.text}</Text>
         <Text style={{fontWeight: 'bold', fontSize: 18}}>Elementi chiave delle Magie: {item.keyElements}</Text>
@@ -46,10 +47,11 @@ class SchoolDescription extends React.Component {
             <View style={{ flex: 1, backgroundColor: 'white'}}>
               <SafeAreaView style={{flex:1}}>
               <FlatList
-                  data={SCHOOLS}
+                  data={SCHOOLS_DESCRIPTIONS_DATA}
                   renderItem={this.renderItem}
                   keyExtractor={item => item.name}
-                  initialNumToRender={4}
+                  initialNumToRender={3}
+                  ItemSeparatorComponent= {this.FlatListItemSeparator}
                 />
               </SafeAreaView>
             </View>

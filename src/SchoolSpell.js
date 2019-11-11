@@ -1,10 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import EvocationStats from './EvocationStats';
 import ScalableImage from 'react-native-scalable-image';
-
+import {connect} from 'react-redux';
+import {withNavigation} from 'react-navigation';
+import {setEvocationName} from './store/actions/actions';
+import {EVOCATION_DATA} from './data/evocations';
 
 class SchoolSpell extends React.Component {
 
@@ -20,11 +23,22 @@ class SchoolSpell extends React.Component {
     }
   }
 
+  showEvocationInfo = (evocationName) =>{
+    if (evocationName){
+      if (EVOCATION_DATA.find((element) => {return (evocationName === element.name);})){
+        this.props.setEvocationName(evocationName);
+        this.props.navigation.navigate('EvocationData');
+      }
+    }
+  }
+
   getEffectWithStats = (evocationStats, effect) =>{
-    const stats = evocationStats.map(stat => {
+    const stats = evocationStats.stats.map(stat => {
       return <EvocationStats key={this.props.data.title + stat.type} type={stat.type} value={stat.value}/>;
     });
-    const effectEvocationsStats = <View style={{flexDirection: 'row'}}>{stats}</View>;
+
+    const evocationName = evocationStats.name;
+    const effectEvocationsStats =  <TouchableWithoutFeedback onPress={()=>{this.showEvocationInfo(evocationName);}}><View style={{flexDirection: 'row'}}>{stats}</View></TouchableWithoutFeedback>;
     const splittedString = effect.split('{evocationStats}');
     if (splittedString.length === 1){
       effect = <><Text style={{fontSize: 17}}>{splittedString[0]}</Text>{effectEvocationsStats}</>;
@@ -80,6 +94,15 @@ class SchoolSpell extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+  };
+};
 
+const mapDispatchToProps = dispatch => {
+  return {
+    setEvocationName: (evocationName) => dispatch(setEvocationName(evocationName)),
+  };
+};
 
-export default SchoolSpell;
+export default withNavigation(connect(mapStateToProps,mapDispatchToProps)(SchoolSpell));

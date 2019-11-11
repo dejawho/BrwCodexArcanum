@@ -90,7 +90,7 @@ export const ROOMS_DATA = [
         instability: 6,
         points: 3,
         effect: 'Evoca 1 Cerbero sotto il tuo controllo. Cerbero ha le seguenti caratteristiche:{evocationStats}Quando Cerbero attacca, converte anche 1 danno sul bersaglio.',
-        evocationStats: [{type: 'speed', value: 2}, {type: 'strength', value: 2}, {type: 'health', value: 3}],
+        evocationStats: {name: 'cerbero', stats: [{type: 'speed', value: 2}, {type: 'strength', value: 2}, {type: 'health', value: 3}]},
     },
     {
         name: 'Armory',
@@ -119,7 +119,7 @@ export const ROOMS_DATA = [
         instability: 6,
         points: 3,
         effect: 'Evoca un Lanzichenecco sotto il tuo controllo. Il Lanzichenecco ha le seguenti caratteristiche:{evocationStats}',
-        evocationStats: [{type: 'speed', value: 2}, {type: 'strength', value: 2}, {type: 'health', value: 3}],
+        evocationStats: {name: 'lanzichenecco', stats: [{type: 'speed', value: 2}, {type: 'strength', value: 2}, {type: 'health', value: 3}]},
     },
     {
         name: 'Crypt',

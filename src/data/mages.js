@@ -63,7 +63,7 @@ export const MAGES_DATA = [
         personalSpellEffect: 'Spostati nella stanza del bersaglio, poi muovi il tuo mago ed il bersaglio fino a 2 stanze di distanza. Per ogni stanza attraversata infliggi 1 danno al bersaglio.',
         personalSpellReverseEffect: 'Spostati nella stanza del bersaglio, poi muovi il tuo mago ed il bersaglio in una stanza adiacente. Ruba 1 punto potere dal bersaglio.',
         image: require('../../assets/mages/geneve.png'),
-        favouriteSchool: 'cospiration',
+        favouriteSchool: 'conspiration',
         set: 'Hidden Thorns',
     },
 ];

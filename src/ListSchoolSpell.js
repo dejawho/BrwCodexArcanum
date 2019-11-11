@@ -3,17 +3,10 @@
 import React from 'react';
 import { View, FlatList, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {COSPIRATION_DATA} from './data/cospiration';
-import {DESTRUCTION_DATA} from './data/destruction';
-import {ILLUSION_DATA} from './data/illusion';
-import {DIVINATION_DATA} from './data/divination';
-import {NECROMANCY_DATA} from './data/necromancy';
-import {TRASMUTATION_DATA} from './data/trasmutation';
-import {FORGOTTEN_DATA} from './data/forgotten';
-import {MYTHOLOGIC_DATA} from './data/mythologic';
 import SchoolSpell from './SchoolSpell';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
 import {connect} from 'react-redux';
+import {getSpellsById} from './data/schools';
 
 class ListSchoolSpell extends React.Component {
 
@@ -38,30 +31,6 @@ class ListSchoolSpell extends React.Component {
     this.focusListener.remove();
   }
 
-
-  getData = () => {
-    switch (this.props.schoolName ) {
-      case 'Cospirazione':
-        return COSPIRATION_DATA;
-      case 'Distruzione':
-        return DESTRUCTION_DATA;
-      case 'Divinazione':
-        return DIVINATION_DATA;
-      case 'Illusione':
-        return ILLUSION_DATA;
-      case 'Necromanzia':
-        return NECROMANCY_DATA;
-      case 'Trasmutazione':
-        return TRASMUTATION_DATA;
-      case 'Dimenticata':
-        return FORGOTTEN_DATA;
-      case 'Mitologica':
-        return MYTHOLOGIC_DATA;
-      default:
-        return undefined;
-    }
-  }
-
   renderItem = ({item, index}) => {
     return <View style={{flex: 1, backgroundColor: (index % 2 === 0 ? 'white' : 'lightgray')}}>
                 <SchoolSpell data={item}/>
@@ -81,7 +50,7 @@ class ListSchoolSpell extends React.Component {
               <SafeAreaView style={{flex:1}}>
               <FlatList
                   ref={(ref) => { this.flatListRef = ref; }}
-                  data={this.getData()}
+                  data={getSpellsById(this.props.schoolName)}
                   renderItem={this.renderItem}
                   keyExtractor={item => item.title}
                   initialNumToRender={4}

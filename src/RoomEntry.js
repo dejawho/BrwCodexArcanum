@@ -20,7 +20,7 @@ class RoomEntry extends React.Component {
   }
 
   getEffectWithStats = (evocationStats, effect) => {
-    const stats = evocationStats.map(stat => {
+    const stats = evocationStats.stats.map(stat => {
       return <EvocationStats key={this.props.room.name + stat.type} type={stat.type} value={stat.value} />;
     });
     const effectEvocationsStats = <View style={{ flexDirection: 'row' }}>{stats}</View>;

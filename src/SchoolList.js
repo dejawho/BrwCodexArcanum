@@ -7,8 +7,7 @@ import {AndroidBackHandler} from 'react-navigation-backhandler';
 import {connect} from 'react-redux';
 import {setSpellSchool} from './store/actions/actions';
 import {withNavigation} from 'react-navigation';
-
-const DATA = ['Cospirazione', 'Distruzione', 'Divinazione', 'Illusione', 'Necromanzia', 'Trasmutazione', 'Dimenticata', 'Mitologica'];
+import {SCHOOLS_CATEGORY_DATA} from './data/schools';
 
 class SchoolList extends React.Component {
 
@@ -18,8 +17,12 @@ class SchoolList extends React.Component {
   }
 
   onItemSelected = (item) =>{
-    this.props.setSpeelSchool(item);
+    this.props.setSpeelSchool(item.id);
     this.props.navigation.navigate('ListSchoolSpell');
+  }
+
+  onEvocationSelected = () =>{
+    this.props.navigation.navigate('ListEvocations');
   }
 
   FlatListItemSeparator = () => {
@@ -41,15 +44,19 @@ class SchoolList extends React.Component {
           <View style={{ flex: 1, alignItems: 'stretch' }}>
             <SafeAreaView >
             <FlatList
-                data={DATA}
+                data={SCHOOLS_CATEGORY_DATA}
                 renderItem={({ item }) => (<TouchableWithoutFeedback onPress={() => this.itemSelected(item)}>
                   <View style={{marginVertical:3}}>
-                    <Text onPress={() => this.onItemSelected(item)} style={{fontSize: 40, fontWeight: 'bold', color: 'white'}}>{item}</Text>
+                    <Text onPress={() => this.onItemSelected(item)} style={{fontSize: 40, fontWeight: 'bold', color: 'white', paddingLeft: 10}}>{item.label}</Text>
                   </View>
                 </TouchableWithoutFeedback>)}
                 ItemSeparatorComponent = {this.FlatListItemSeparator}
-                keyExtractor={item => item}
+                keyExtractor={item => item.id}
               />
+               <View style={{height: 0.5, width: '100%', backgroundColor: '#C8C8C8'}}/>
+               <View style={{marginVertical:3}}>
+                    <Text onPress={() => this.onEvocationSelected()} style={{fontSize: 40, fontWeight: 'bold', color: 'white', paddingLeft: 10}}>Evocazioni</Text>
+                </View>
             </SafeAreaView>
           </View>
         </ImageBackground>

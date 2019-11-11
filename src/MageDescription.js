@@ -6,14 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { MAGES_DATA } from './data/mages';
 import ScalableImage from 'react-native-scalable-image';
 import SchoolSpell from './SchoolSpell';
-import { COSPIRATION_DESCRIPTION } from './data/cospiration';
-import { DESTRUCTION_DESCRIPTION } from './data/destruction';
-import { DIVINATION_DESCRIPTION } from './data/divination';
-import { ILLUSION_DESCRIPTION } from './data/illusion';
-import { NECROMANCY_DESCRIPTION } from './data/necromancy';
-import { TRASMUTATION_DESCRIPTION } from './data/trasmutation';
-import { FORGOTTEN_DESCRIPTION } from './data/forgotten';
-import { MYTHOLOGIC_DESCRIPTION } from './data/mythologic';
+import {getDescriptionById} from './data/schools';
 import {AndroidBackHandler} from 'react-navigation-backhandler';
 
 const SEPARATOR = require('../assets/div.png');
@@ -23,52 +16,6 @@ class MagesDescription extends React.Component {
   doBack = () => {
     this.props.navigation.navigate('Home');
     return true;
-  }
-
-  getSchoolImage = (schoolName) => {
-    switch (schoolName) {
-      case 'divination':
-        return DIVINATION_DESCRIPTION.image;
-      case 'cospiration':
-        return COSPIRATION_DESCRIPTION.image;
-      case 'destruction':
-        return DESTRUCTION_DESCRIPTION.image;
-      case 'illusion':
-        return ILLUSION_DESCRIPTION.image;
-      case 'necromancy':
-        return NECROMANCY_DESCRIPTION.image;
-      case 'trasmutation':
-        return TRASMUTATION_DESCRIPTION.image;
-      case 'forgotten':
-        return FORGOTTEN_DESCRIPTION.image;
-      case 'mythologic':
-        return MYTHOLOGIC_DESCRIPTION.image;
-      default:
-        return undefined;
-    }
-  }
-
-  getSchoolName = (schoolName) => {
-    switch (schoolName) {
-      case 'divination':
-        return DIVINATION_DESCRIPTION.name;
-      case 'cospiration':
-        return COSPIRATION_DESCRIPTION.name;
-      case 'destruction':
-        return DESTRUCTION_DESCRIPTION.name;
-      case 'illusion':
-        return ILLUSION_DESCRIPTION.name;
-      case 'necromancy':
-        return NECROMANCY_DESCRIPTION.name;
-      case 'trasmutation':
-        return TRASMUTATION_DESCRIPTION.name;
-      case 'forgotten':
-        return FORGOTTEN_DESCRIPTION.name;
-      case 'mythologic':
-        return MYTHOLOGIC_DESCRIPTION.name;
-      default:
-        return undefined;
-    }
   }
 
   FlatListItemSeparator = () => {
@@ -88,6 +35,7 @@ class MagesDescription extends React.Component {
                        evocationStats: item.spellEvocationStats,
                        reverseEvocationStats: item.reverseSpellEvocationStats,
                       };
+    const schoolDescription = getDescriptionById(item.favouriteSchool);
     return (<View style={{ flex: 1, marginVertical: 3, marginLeft: 10, marginRight: 10 }}>
       <Text style={{ fontSize: 25, fontWeight: 'bold', alignSelf: 'center' }}>{item.name}</Text>
       <ScalableImage source={item.image} width={200} style={{ resizeMode: 'contain', alignSelf: 'center' }} />
@@ -95,8 +43,8 @@ class MagesDescription extends React.Component {
       <View style={{ alignSelf: 'stretch' }}>
         <SchoolSpell data={spellData}/>
       </View>
-      <ScalableImage source={this.getSchoolImage(item.favouriteSchool)} width={120} style={{ resizeMode: 'contain', alignSelf: 'center' }} />
-      <Text style={{ fontWeight: 'bold', fontSize: 18, alignSelf: 'center' }}>{this.getSchoolName(item.favouriteSchool)}</Text>
+      <ScalableImage source={schoolDescription.image} width={120} style={{ resizeMode: 'contain', alignSelf: 'center' }} />
+      <Text style={{ fontWeight: 'bold', fontSize: 18, alignSelf: 'center' }}>{schoolDescription.name}</Text>
     </View>);
   }
 
@@ -116,7 +64,7 @@ class MagesDescription extends React.Component {
                 renderItem={this.renderItem}
                 keyExtractor={item => item.name}
                 ItemSeparatorComponent= {this.FlatListItemSeparator}
-                initialNumToRender={4}
+                initialNumToRender={3}
               />
             </SafeAreaView>
           </View>

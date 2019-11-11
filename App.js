@@ -14,6 +14,8 @@ import SchoolList from './src/SchoolList';
 import ListSchoolSpell from './src/ListSchoolSpell';
 import RoomsEffects from './src/RoomsEffects';
 import Reference from './src/Reference';
+import EvocationData from './src/EvocationData';
+import ListEvocations from './src/ListEvocations'
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { View } from 'react-native';
@@ -47,6 +49,12 @@ const TabNavigator = createBottomTabNavigator({
   },
   Reference: {
     screen: Reference,
+  },
+  EvocationData: {
+    screen: EvocationData,
+  },
+  ListEvocations: {
+    screen: ListEvocations,
   },
 },
 {
