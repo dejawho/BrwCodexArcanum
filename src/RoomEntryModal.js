@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import { Modal, View, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import RoomEntry from './RoomEntry';
