@@ -1,10 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, ScrollView, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
+import { View, ScrollView, SafeAreaView, TouchableWithoutFeedback, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { AndroidBackHandler } from 'react-navigation-backhandler';
-import Image from 'react-native-scalable-image';
 import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView';
 
 
@@ -30,6 +29,8 @@ class Reference extends React.Component {
   }
 
   render() {
+    const imageData = Image.resolveAssetSource(REFERENCE_1);
+    const height = (this.state.imageContainerWidth * imageData.height) / imageData.width;
     return (
       <AndroidBackHandler onBackPress={this.onBack}>
         <View style={{ flex: 1, backgroundColor: 'black' }} onLayout={this.imageContainerLayout}>
@@ -47,7 +48,7 @@ class Reference extends React.Component {
           >
             <SafeAreaView style={{ flex: 1 }}>
               <ScrollView>
-                <Image width={this.state.imageContainerWidth} source={REFERENCE_1} />
+                <View style={{width: this.state.imageContainerWidth, height: height}}><Image style={{ width: this.state.imageContainerWidth, height: height, resizeMode:'contain'}} source={REFERENCE_1}/></View>
               </ScrollView>
             </SafeAreaView>
           </ReactNativeZoomableView>

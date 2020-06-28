@@ -19,10 +19,6 @@ class RoomsEffects extends React.Component {
     return true;
   }
 
-  renderItem = ({item, index}) => {
-    return ;
-  }
-
   FlatListItemSeparator = () => {
     return (
       //Item Separator
@@ -31,7 +27,7 @@ class RoomsEffects extends React.Component {
   };
 
   onItemSelected = (item) => {
-    this.setState({currentRoom: item})
+    this.setState({currentRoom: item});
   }
 
   closeModal = () => {
@@ -53,9 +49,9 @@ class RoomsEffects extends React.Component {
               <SafeAreaView style={{flex:1}}>
               <FlatList
                   data={ROOMS_DATA.sort((el1, el2) => {return el1.name.localeCompare(el2.name);})}
-                  renderItem={({ item }) => (<TouchableWithoutFeedback onPress={() => this.itemSelected(item)}>
+                  renderItem={({ item }) => (<TouchableWithoutFeedback onPress={() => this.onItemSelected(item)}>
                   <View style={{marginVertical:3, flexDirection: 'row', alignItems: 'center'}}>
-                    <Text onPress={() => this.onItemSelected(item)} style={{fontSize: 25, fontWeight: 'bold', color: 'white', paddingLeft: 10}}>
+                    <Text style={{fontSize: 25, fontWeight: 'bold', color: 'white', paddingLeft: 10}}>
                       {item.name}
                     </Text>
                     {item.color ? <View style={{width: 15, height: 15, backgroundColor: item.color, marginLeft: 10}}/> : null}
